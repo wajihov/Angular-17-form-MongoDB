@@ -1,0 +1,48 @@
+<div class="container">
+    <form [formGroup]="signForm" (ngSubmit)="onConnect()">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="nom" class="form-label">Nom</label>
+                <input id="nom" class="form-control" type="text" formControlName="name" placeholder="Entrer votre nom">
+            </div>
+            <div class="col-md-6">
+                <label for="prenom" class="form-label">Prénom</label>
+                <input id="prenom" class="form-control" type="text" formControlName="lastname"
+                    placeholder="Entrer votre prénom">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="mail" class="form-label">Mail</label>
+                <input id="mail" class="form-control" type="text" formControlName="email"
+                    placeholder="Entrer votre mail">
+            </div>
+            <div class="col-md-6">
+                <label for="numéro" class="form-label">Numéro</label>
+                <input id="numéro" class="form-control" type="text" formControlName="phone"
+                    placeholder="Entrer votre numéro">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label for="adresse" class="form-label">Adresse</label>
+                <input id="adresse" class="form-control" type="text" formControlName="address"
+                    placeholder="Entrer votre adresse">
+            </div>
+        </div>
+        <div class="row">
+            <label class="form-label">Sexe</label>
+            <div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="Male" formControlName="gender" value="Male">
+                    <label class="custom-control-label" for="sexeMasculin">Masculin</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="Female" formControlName="gender" value="Female">
+                    <label class="custom-control-label" for="sexeFéminin">Féminin</label>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary">S'inscrire</button>
+    </form>
+</div>
